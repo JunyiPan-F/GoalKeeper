@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "999396868606",
+    "project_id": "pjy-goalkeeper",
+    "storage_bucket": "pjy-goalkeeper.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:999396868606:android:b6e6794e79f28e797e40af",
+        "android_client_info": {
+          "package_name": "com.company.pjy_goalkeeper_project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYzjm-zhPv0L19tq-py5GrnZReNwwoVIM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:999396868606:android:1940606d2987061c7e40af",
+        "android_client_info": {
+          "package_name": "com.example.my_flutter_project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYzjm-zhPv0L19tq-py5GrnZReNwwoVIM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
