@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'home.dart';
 import 'verify.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 import 'package:get/get.dart';
+import 'common/colors.dart';
 
 class LoginPage extends StatefulWidget {
 
@@ -24,7 +24,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFFAF0CA), 
+      backgroundColor: BG_COLOR, 
       body: Center(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width * 0.1, vertical: 15),   
@@ -39,14 +39,14 @@ class _LoginPageState extends State<LoginPage> {
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
                     fontFamily: 'Myanmar Khyay',
-                    color: Color(0xFF0D3B66),
+                    color: TEXT_COLOR,
                   ),
                 ),
                 const SizedBox(height: 40),
                 Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(40),
-                    color: Color(0xFFFFFEFB),//Color(0xFFFAF0CA),
+                    color: CREAM_COLOR,//BG_COLOR,
                   ),
 
                   child: Padding(
@@ -68,7 +68,7 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                           ignoreBlank: false,
                           autoValidateMode: AutovalidateMode.disabled,
-                          selectorTextStyle: TextStyle(color: Color(0xFF0D3B66), fontFamily: 'Myanmar Khyay'),
+                          selectorTextStyle: TextStyle(color: TEXT_COLOR, fontFamily: 'Myanmar Khyay'),
                           initialValue: number,
                           textFieldController: controller,
                           formatInput: true,
@@ -84,77 +84,13 @@ class _LoginPageState extends State<LoginPage> {
                       )
                   ),
                 ),
-                  SizedBox(height: 15),
-                  // ElevatedButton(
-                  //   onPressed: () {
-                  //     formKey.currentState?.validate();
-                  //   },
-                  //   style: ElevatedButton.styleFrom(
-                  //     primary: Color(0xFFF4D35E),
-                  //     padding: EdgeInsets.symmetric(
-                  //       horizontal: MediaQuery.of(context).size.width * 0.28,
-                  //       vertical: 20,
-                  //     ),
-                  //     shape: RoundedRectangleBorder(
-                  //       borderRadius: BorderRadius.circular(40),
-                  //     ),
-                  //   ),
-                  //   child: TextField(
-                  //     controller: _usernameController,
-                  //     style: const TextStyle(
-                  //       fontFamily: 'Myanmar Khyay',
-                  //       color: Color(0xFF0D3B66),
-                  //     ),
-                  //     decoration: const InputDecoration(
-                  //       hintText: 'Username',
-                  //       border: InputBorder.none,
-                  //       hintStyle: TextStyle(
-                  //         fontFamily: 'Myanmar Khyay',
-                  //         color: Color(0xFF0D3B66)
-                  //       ),
-                  //     ),
-                  //   ),
-                  // ),
-                // SizedBox(height: 20),
-                // Container(
-                //   decoration: BoxDecoration(
-                //     borderRadius: BorderRadius.circular(40),
-                //     color: Color(0xFFFFFEFB),
-                //   ),
-                //   child: Padding(
-                //     padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width * 0.05, vertical: 10),
-                //     child: TextField(
-                //       controller: _passwordController,
-                //       style: const TextStyle(
-                //         fontFamily: 'Myanmar Khyay',
-                //         color: Color(0xFF0D3B66),
-                //         fontSize: 16,
-                //       ),
-                //       obscureText: true,
-                //       decoration: const InputDecoration(
-                //         hintText: 'Password',
-                //         border: InputBorder.none,
-                //         hintStyle: TextStyle(
-                //           fontFamily: 'Myanmar Khyay',
-                //           color: Color(0xFF0D3B66),
-                //           fontSize: 16,
-                //         ),
-                //       ),
-                //     ),
-                //   ),
-                // ),
-                SizedBox(height: 20),
+                SizedBox(height: 35),
                 ElevatedButton(
                   onPressed: () {
-                    // Add your logic for authentication here
-                    // Navigator.pushReplacement(
-                    //   context,
-                    //   MaterialPageRoute(builder: (context) => PhoneVerificationPage(phoneNumber: "6107515390",)),
-                    // );
                     Get.to(PhoneVerificationPage(phoneNumber: "6107515390",));
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(0xFFF4D35E),
+                    backgroundColor: BUTTON_COLOR,
                     padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width * 0.28, vertical: 20), // Adjusted padding
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(40),
@@ -163,7 +99,7 @@ class _LoginPageState extends State<LoginPage> {
                   child: const Text('Sign In',
                       style: TextStyle(
                       fontFamily: 'Myanmar Khyay',
-                      color: Color(0xFF0D3B66),
+                      color: TEXT_COLOR,
                       fontSize: 16,
                     ),
                   ),

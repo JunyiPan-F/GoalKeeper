@@ -96,7 +96,7 @@ class _PhoneVerificationPageState extends State<PhoneVerificationPage> {
                       ),
                     ),
                     onPressed: () {
-                      Get.offAll(HomePage());
+                      Get.to(HomePage());
                     },child: const Text(
                       "Confirm",
                       style: TextStyle(
