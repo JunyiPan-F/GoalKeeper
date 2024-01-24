@@ -1,5 +1,8 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:my_flutter_project/goals.dart';
+import 'package:my_flutter_project/profile.dart';
 import 'common/colors.dart';
 import 'package:get/get.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -27,7 +30,8 @@ class _HomePageState extends State<HomePage> {
             padding: EdgeInsets.only(left: 10),
             icon: FaIcon(FontAwesomeIcons.listOl, color: TEXT_COLOR,), 
             onPressed: () { 
-              Get.to(GoalsPage(), transition: Transition.leftToRight);            },
+              Get.to(GoalsPage(), transition: Transition.leftToRight);
+            },
           ),
         actions: [
           IconButton(
@@ -39,14 +43,15 @@ class _HomePageState extends State<HomePage> {
           IconButton(
             padding: EdgeInsets.only(right: 10),
             onPressed: () {
-              
+              Get.to(ProfilePage(), transition: Transition.rightToLeft);
             },
             icon: FaIcon(FontAwesomeIcons.user, color: TEXT_COLOR,),
           ),
         ],
       ),
-      
-      body: ListView(
+
+      body: 
+      ListView(
         children: [
           Container(
             margin: EdgeInsets.all(20),
@@ -100,16 +105,41 @@ class _HomePageState extends State<HomePage> {
               
             ),
           ),
-          ListTile(
-            title: Text('List Item 1'),
+
+          Container(
+            margin: EdgeInsets.all(20),
+            padding: EdgeInsets.all(20),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              color: CREAM_COLOR,
+            ),
+            child: const Center(child: Text('Entry A')),
           ),
-          ListTile(
-            title: Text('List Item 2'),
+
+          Container(
+            margin: EdgeInsets.all(20),
+            padding: EdgeInsets.all(20),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              color: CREAM_COLOR,
+            ),
+            child: const Center(child: Text('Entry B')),
           ),
-          ListTile(
-            title: Text('List Item 3'),
+
+          Container(
+            margin: EdgeInsets.all(20),
+            padding: EdgeInsets.all(20),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              color: CREAM_COLOR,
+            ),
+            child: const Center(child: Text('Entry C')),
           ),
-          // Add more list items as needed
+        
+            
+            
+
+          
         ],
       ),
     );
